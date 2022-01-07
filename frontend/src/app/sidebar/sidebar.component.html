@@ -144,64 +144,37 @@
               This week
             </button>
           </div>
-        </div>
-        
-        <!-- <h2>Section title</h2> -->
+        </div>                
         <h4>Section title table</h4>
+        
+        <!-- {{arrayH.length}}
+        <hr>
+        {{arrayH}}
+        <hr>        
+        {{ arrayH[7].name }} {{ arrayH[7].price }}  -->
+
+        
+
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Header</th>
-                <th scope="col">Header</th>
-                <th scope="col">Header</th>
-                <th scope="col">Header</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>                
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1,001</td>
-                <td>random</td>
-                <td>data</td>
-                <td>placeholder</td>
-                <td>text</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>visual</td>
-                <td>layout</td>
-              
-              <tr>
-                <td>1,006</td>
-                <td>dashboard</td>
-                <td>illustrative</td>
-                <td>rich</td>
-                <td>data</td>
-              </tr>
-              <tr>
-                <td>1,007</td>
-                <td>placeholder</td>
-                <td>tabular</td>
-                <td>information</td>
-                <td>irrelevant</td>
-              </tr>
-              <tr>
-                <td>1,008</td>
-                <td>random</td>
-                <td>data</td>
-                <td>placeholder</td>
-                <td>text</td>
-              </tr>
-              
-              
+              <tr  *ngFor="let prod of arrayH; index as i" >
+                <td>{{i}}</td>
+                <td>{{ prod.name }}</td>
+                <td>{{ prod.price }}</td>                
+              </tr>              
             </tbody>
           </table>
         </div>
+        
         <!-- ---------------------- -->
-
       </div>
 
       <div *ngIf="opcionSidebar == 3">
@@ -217,6 +190,11 @@
               <span data-feather="calendar"></span>
               This week
             </button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-sm btn-outline-secondary ">              
+              + Add Sale
+            </button>
+
           </div>
         </div>
 
