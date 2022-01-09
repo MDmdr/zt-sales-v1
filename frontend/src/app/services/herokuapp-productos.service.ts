@@ -20,7 +20,8 @@ export class HerokuappProductosService {
     return this._http.get(urlAPI).pipe( map( (res: any) => res) );
     //map(res => res);
     //return this.http.get('http://localhost/ionicapis/public/api/products').pipe(map(res => res.json()));
-  }
+
+  }// end metodoHerokuappProducts
 
 
 }

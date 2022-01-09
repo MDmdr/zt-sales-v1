@@ -8,17 +8,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
+import { NewSaleComponent } from './sidebar/new-sale/new-sale.component';
+
+import { FormsModule } from '@angular/forms';// <---- Importar FormsModule
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    NewSaleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HerokuappProductosService],
   bootstrap: [AppComponent]

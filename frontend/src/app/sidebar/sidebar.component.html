@@ -179,7 +179,9 @@
 
       <div *ngIf="opcionSidebar == 3">
         <!-- ---------------------- -->
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <app-new-sale *ngIf="newSale==1" (eventoHijo)="onMensajeHijo($event)" ></app-new-sale>
+
+        <div *ngIf="newSale==0" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Ventas</h1>
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
@@ -191,7 +193,7 @@
               This week
             </button>
             &nbsp;&nbsp;
-            <button type="button" class="btn btn-sm btn-outline-secondary ">              
+            <button type="button" class="btn btn-sm btn-outline-secondary" (click)="opcionNewSale(1)">              
               + Add Sale
             </button>
 
@@ -202,7 +204,7 @@
         <br><hr><hr> -->      
 
         <!-- <h2>Section title</h2> -->
-        <h4>Section title table</h4>
+        <h4>Tabla de ventas realizadas</h4>
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>

@@ -14,8 +14,12 @@ export class SidebarComponent implements OnInit {
   opcionSidebar: number = 1;
   arrayH: any = [];
   //arrayH:string [] = [];
+  newSale: number = 0;
+  //public newSale: number = 0;
 
-  constructor(private _herokuProducts: HerokuappProductosService) { }
+  constructor(
+    private _herokuProducts: HerokuappProductosService
+    ) { }
 
   ngOnInit(): void {
     this._herokuProducts.metodoHerokuappProducts().subscribe( (res: any) => console.log(res) );
@@ -51,6 +55,17 @@ export class SidebarComponent implements OnInit {
     this.opcionSidebar = index;
    }
 
-}//end class Side... OnInit
+  opcionNewSale(value: number): void {
+    console.log("opcionNewSale= " + value);
+    this.newSale = value;
+  }
+
+  onMensajeHijo(mensaje: any) {
+    //this.mensajeHijo=mensaje;
+    //alert(mensaje);
+    this.newSale = 0;
+   }
+
+}//end class Side... OnInit end???
 
 /*----------------------------------*/
