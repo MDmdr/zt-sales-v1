@@ -11,22 +11,24 @@
 </div>
   <!-- <p>parra x</p> -->
   <h4>Producto ZT</h4>
-  
+  <br>
 		
 		<form #formularioProducto="ngForm" (ngSubmit)="formProductSend()">
-			<!-- <input type="text" name="producto" placeholder="Nombre del producto" [(ngModel)]="productoZtModel.nombre">
-			<br><br>			
-			<input type="number" name="precio" placeholder="Precio" [(ngModel)]="productoZtModel.precio">
+			<input type="text" name="producto" placeholder="Nombre del producto" [(ngModel)]="productoZtModel.nombre">
 			<br><br>
+			<!--			
+			<input type="number" name="precio" placeholder="Precio" [(ngModel)]="productoZtModel.precio">
+			<br><br>			
             <input type="text" name="precio" placeholder="Precio" [(ngModel)]="productoZtModel.precio">
 			<br><br> -->
-            <input type="text" name="producto" placeholder="Nombre del producto" >
-			<br><br>			
-			<input type="number" name="precio" placeholder="Precio" >
+			
+            <!-- <input type="text" name="producto" placeholder="Nombre del producto" >
+			<br><br>			 -->
+			<input type="number" name="precio" placeholder="Precio" [(ngModel)]="productoZtModel.precio">
 			<br><br>
             
 			
-			<button type="submit">Guardar venta</button>
+			<button type="submit" class="btn btn-sm btn-outline-secondary">Guardar venta</button>
 		</form>
 
 		<!-- <h2>Depurando ... </h2>

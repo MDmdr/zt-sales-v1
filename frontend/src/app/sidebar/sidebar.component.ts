@@ -3,6 +3,9 @@ import { HerokuappProductosService } from '../services/herokuapp-productos.servi
 
 import { map } from 'rxjs/operators';
 
+//import { chart } from 'chart.js';
+import { Chart } from 'chart.js';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -65,6 +68,58 @@ export class SidebarComponent implements OnInit {
     //alert(mensaje);
     this.newSale = 0;
    }
+
+   //----------------------------------------------------------------------------
+   /*/ Graphs-------------------------------------
+   //let canvas = document.getElementById('canvas') as HTMLCanvasElement;
+  //var ctx = document.getElementById('myChart');
+  //ctx = document.getElementById('myChart');
+  ctx = document.getElementById('myChart') as HTMLCanvasElement;
+  // eslint-disable-next-line no-unused-vars
+  myChart = new Chart(this.ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+      ],
+      datasets: [{
+        data: [
+          15339,
+          21345,
+          18483,
+          24003,
+          23489,
+          24092,
+          12034
+        ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#007bff',
+        borderWidth: 4,
+        pointBackgroundColor: '#007bff'
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: false
+          }
+        }]
+      },
+      legend: {
+        display: false
+      }
+    }
+  }); //fin grafica
+   //----------------------------------------------------------------------------
+   */
 
 }//end class Side... OnInit end???
 

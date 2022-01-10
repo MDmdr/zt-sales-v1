@@ -18,6 +18,7 @@ export class NewSaleComponent implements OnInit {
   }
 
   optionSaveSale(value: number): void {
+    this.localS();
     //alert("guardar venta zt: "+value);
     //SidebarComponent.opcionNewSale=0
     alert("¡ Venta almacenada! ");
@@ -25,7 +26,7 @@ export class NewSaleComponent implements OnInit {
   }
 
   /*---------------------------*/
-  //productoZtModel = new ProductZt("", "" );
+  productoZtModel = new ProductZt("", 0 );
 
   // formProductSend(){
   //   alert("formProductSend save");    
@@ -37,12 +38,19 @@ export class NewSaleComponent implements OnInit {
   eventoHijo = new EventEmitter<string>();
 
   formProductSend(){
+    this.localS();
     //alert("enviar al component padre, y formProductSend save");
     alert("¡ Venta almacenada! ");
     // debe de guaradar o enviar a back end
     this.eventoHijo.emit("evento hijo!!!!, al enviar formulario");
 
     
+  }
+
+  localS(){
+    localStorage.setItem('productoZt', JSON.stringify(this.productoZtModel));    
+    var recuperar_xb = localStorage.getItem("productoZt");
+    console.log("imprime" + recuperar_xb);
   }
   
 
