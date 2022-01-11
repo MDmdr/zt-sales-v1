@@ -11,19 +11,26 @@ import { HeaderComponent } from './header/header.component';
 import { NewSaleComponent } from './sidebar/new-sale/new-sale.component';
 
 import { FormsModule } from '@angular/forms';// <---- Importar FormsModule
+//-----------------
+//import { LineChartComponent } from '../line-chart/line-chart.component';
+import { LineChartComponent } from './sidebar/line-chart/line-chart.component';
+import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     HeaderComponent,
-    NewSaleComponent
+    NewSaleComponent,
+    LineChartComponent //para la LineChart
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [HerokuappProductosService],
   bootstrap: [AppComponent]

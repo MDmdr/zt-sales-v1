@@ -40,27 +40,16 @@
             </a>
           </li>
 
-          <!-- code + -->
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Customers
+          <li class="nav-item">            
+            <a class="nav-link" routerLinkActive="active" routerLink="line-chart" href="#" (click)="onSidebarOpcion(4)">
+              <span data-feather="shopping-cart"></span>
+              Grafica
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Integrations
-            </a>
-          </li>
-          -->
+
+          <!-- <li class="list-group-item" routerLinkActive="active" routerLink="line-chart">Line Chart</li> -->
+          
+          
 
         </ul>
 
@@ -127,9 +116,19 @@
           </div>
         </div>
         <h4>¡ Grafica !</h4>
-        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+        <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380">Canvas app</canvas> -->
+
+        <!-- <router-outlet></router-outlet> ???  -->
 
       </div>
+      <!-- ------------------------------- -->
+
+      <div *ngIf="opcionSidebar == 4">
+        <router-outlet></router-outlet>
+      </div>
+      
+
+
 
       <div *ngIf="opcionSidebar == 2">
         <!-- ------------------ -->
