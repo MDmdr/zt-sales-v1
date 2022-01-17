@@ -5,6 +5,8 @@ import { SidebarComponent } from '../sidebar.component'; //??
 
 import { EventEmitter, Input, Output } from '@angular/core';
 
+import { SalesComponent } from '../sales/sales.component';
+
 @Component({
   selector: 'app-new-sale',
   templateUrl: './new-sale.component.html',
@@ -23,6 +25,8 @@ export class NewSaleComponent implements OnInit {
     //SidebarComponent.opcionNewSale=0
     alert("¡ Venta almacenada! ");
     this.eventoHijo.emit("evento hijo!!!!, al enviar formulario");
+    this.valH.emit(1);
+    //redirectTo: 'sales'
   }
 
   /*---------------------------*/
@@ -37,12 +41,16 @@ export class NewSaleComponent implements OnInit {
   @Output()
   eventoHijo = new EventEmitter<string>();
 
+  @Output()
+  valH = new EventEmitter<number>();
+
   formProductSend(){
     this.localS();
     //alert("enviar al component padre, y formProductSend save");
     alert("¡ Venta almacenada! ");
     // debe de guaradar o enviar a back end
     this.eventoHijo.emit("evento hijo!!!!, al enviar formulario");
+    this.valH.emit(1);
 
     
   }

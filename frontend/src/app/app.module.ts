@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';// <---- Importar FormsModule
 //import { LineChartComponent } from '../line-chart/line-chart.component';
 import { LineChartComponent } from './sidebar/line-chart/line-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import { SalesComponent } from './sidebar/sales/sales.component';
+import { ShoppingComponent } from './sidebar/shopping/shopping.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ChartsModule } from 'ng2-charts';
     SidebarComponent,
     HeaderComponent,
     NewSaleComponent,
-    LineChartComponent //para la LineChart
+    LineChartComponent,
+    SalesComponent,
+    ShoppingComponent //para la LineChart
   ],
   imports: [
     BrowserModule,

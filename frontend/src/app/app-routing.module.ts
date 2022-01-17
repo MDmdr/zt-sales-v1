@@ -2,9 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LineChartComponent } from './sidebar/line-chart/line-chart.component';
+import { NewSaleComponent } from './sidebar/new-sale/new-sale.component';
+import { SalesComponent } from './sidebar/sales/sales.component';
+import { ShoppingComponent } from './sidebar/shopping/shopping.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'line-chart' },
   { path: 'line-chart', component: LineChartComponent },
+  { path: 'new-sale', component: NewSaleComponent},
+  { path: 'sales', component: SalesComponent},
+  { path: 'shopping', component: ShoppingComponent},
+  { path: 'sales/new-sale', component: NewSaleComponent},
+  { path: 'new-sale/sales', component: SalesComponent},
+  { path: 'sales/new-sale/sales', component: SalesComponent}
 ];
 
 // const routes: Routes = [
